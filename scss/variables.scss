@@ -1,2 +1,34 @@
 $main-color: #0082FF;
 $content-color: #1C1C1C;
+
+
+// Mixin
+
+// a style links
+@mixin links($color) {
+    a {
+        color: $color;
+        text-decoration: none;
+        text-transform: uppercase;
+
+        &:visited,
+        &:active,
+        &:focus {
+            text-decoration: none;
+        }
+    }
+}
+
+// flex flow row space-between
+@mixin flexSpaceBetween() {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+// flex flow row center
+@mixin flexSpaceCenter() {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

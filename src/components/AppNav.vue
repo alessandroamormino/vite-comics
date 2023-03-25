@@ -49,20 +49,12 @@ nav {
             gap: 2em;
         }
 
+        @include links(#000);
+
         a {
             position: relative;
 
-            color: #000;
-            text-decoration: none;
-            text-transform: uppercase;
-
             padding: 4em 0;
-
-            &:visited,
-            &:active,
-            &:focus {
-                text-decoration: none;
-            }
 
             &:hover {
                 color: $main-color;
