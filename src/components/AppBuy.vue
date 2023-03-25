@@ -46,6 +46,9 @@ export default {
 @use '../scss/variables.scss' as *;
 
 #buy {
+    position: relative;
+    z-index: 1;
+
     background-color: $main-color;
     padding: 3em 0;
 

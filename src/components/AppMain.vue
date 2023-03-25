@@ -8,16 +8,16 @@ export default {
 }
 </script>
 <template>
-    <div id="main">
+    <main>
         <div class="container-centered">
             <h2>Content goes here</h2>
         </div>
-    </div>
+    </main>
 </template>
 <style lang="scss" scoped>
 @use '../scss/variables.scss' as *;
 
-#main {
+main {
     padding: 3em 0;
     background-color: $content-color;
     color: #fff;
