@@ -20,10 +20,10 @@ export default {
 </script>
 <template>
     <nav class="container-centered">
-        <div class="nav-right">
+        <div class="nav-left">
             <img src="/img/dc-logo.png" alt="Logo">
         </div>
-        <div class="nav-left">
+        <div class="nav-right">
             <ul>
                 <li v-for="link in links"><a href="#">{{ link }}</a></li>
             </ul>
@@ -39,14 +39,24 @@ nav {
     align-items: center;
     // flex
 
-    padding: 1.5em 0;
+    // padding: 2em 0;
 
     .nav-left {
+        img {
+            width: 75%;
+        }
+    }
+
+    .nav-right {
         ul {
             display: flex;
             justify-content: center;
             align-items: center;
             gap: 2em;
+
+            li {
+                padding: 3em 0;
+            }
         }
 
         @include links(#000);
@@ -54,7 +64,7 @@ nav {
         a {
             position: relative;
 
-            padding: 4em 0;
+            padding: 3em 0;
 
             &:hover {
                 color: $main-color;
