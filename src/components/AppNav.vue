@@ -21,7 +21,9 @@ export default {
 <template>
     <nav class="container-centered">
         <div class="nav-left">
-            <img src="/img/dc-logo.png" alt="Logo">
+            <a href="#">
+                <img src="/img/dc-logo.png" alt="Logo">
+            </a>
         </div>
         <div class="nav-right">
             <ul>
