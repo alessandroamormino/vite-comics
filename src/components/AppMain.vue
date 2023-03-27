@@ -98,6 +98,9 @@ export default {
                 <AppCard v-for="card in cards" :title="card.series" :img="card.thumb"></AppCard>
             </div>
         </div>
+        <div class="load-more">
+            <button id="load" class="btn">Load More</button>
+        </div>
     </main>
 </template>
 <style lang="scss" scoped>
@@ -141,6 +144,21 @@ main {
             @include flexSpaceBetween();
             flex-wrap: wrap;
             gap: 1em;
+        }
+    }
+
+    .load-more {
+        text-align: center;
+        padding-bottom: 1em;
+
+        #load {
+            padding: .5em 4em;
+
+            background-color: $main-color;
+            border: none;
+
+            text-transform: uppercase;
+            color: white;
         }
     }
 }
