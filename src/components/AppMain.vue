@@ -159,6 +159,12 @@ main {
 
             text-transform: uppercase;
             color: white;
+
+            transition: transform .1s ease-in;
+
+            &:hover {
+                transform: scale(1.05);
+            }
         }
     }
 }

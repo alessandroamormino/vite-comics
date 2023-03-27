@@ -28,6 +28,12 @@ export default {
     height: 200px;
     object-fit: cover;
     object-position: top;
+
+    transition: transform .1s ease-in;
+  }
+
+  &:hover img {
+    transform: scale(1.05)
   }
 
   .title {
