@@ -19,16 +19,18 @@ export default {
 }
 </script>
 <template>
-    <nav class="container-centered">
-        <div class="nav-left">
-            <a href="#">
-                <img src="/img/dc-logo.png" alt="Logo">
-            </a>
-        </div>
-        <div class="nav-right">
-            <ul>
-                <li v-for="link in links"><a href="#">{{ link }}</a></li>
-            </ul>
+    <nav>
+        <div class="container-centered">
+            <div class="nav-left">
+                <a href="#">
+                    <img src="/img/dc-logo.png" alt="Logo">
+                </a>
+            </div>
+            <div class="nav-right">
+                <ul>
+                    <li v-for="link in links"><a href="#">{{ link }}</a></li>
+                </ul>
+            </div>
         </div>
     </nav>
 </template>
@@ -36,57 +38,72 @@ export default {
 @use '../scss/variables.scss' as *;
 
 nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    // flex
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
 
-    // padding: 2em 0;
+    z-index: 2;
 
-    .nav-left {
-        img {
-            width: 75%;
-        }
-    }
+    width: 100%;
 
-    .nav-right {
-        ul {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 2em;
+    background-color: #fff;
 
-            li {
-                padding: 3em 0;
+    .container-centered {
+
+
+        // position
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        // flex
+
+        .nav-left {
+            img {
+                width: 75%;
             }
         }
 
-        @include links(#000);
+        .nav-right {
+            ul {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 2em;
 
-        a {
-            position: relative;
+                li {
+                    padding: 3em 0;
+                }
+            }
 
-            padding: 3em 0;
+            @include links(#000);
 
-            &:hover {
-                color: $main-color;
+            a {
+                position: relative;
 
-                &::after {
-                    content: '';
+                padding: 3em 0;
 
-                    position: absolute;
-                    bottom: 0;
-                    right: 0;
-                    left: 0;
+                &:hover {
+                    color: $main-color;
 
-                    width: 100%;
-                    height: 4px;
+                    &::after {
+                        content: '';
+
+                        position: absolute;
+                        bottom: 0;
+                        right: 0;
+                        left: 0;
+
+                        width: 100%;
+                        height: 4px;
 
 
-                    background-color: $main-color;
+                        background-color: $main-color;
+                    }
                 }
             }
         }
     }
+
 }
 </style>
