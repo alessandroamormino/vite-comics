@@ -19,13 +19,13 @@ export default {
 .card {
   display: flex;
   flex-flow: column nowrap;
+  gap: 1em 1.5em;
 
   width: calc(100% / 6 - 1.5em / 6 * 5);
   height: 280px;
 
   img {
     width: 100%;
-    // height: 200px;
     aspect-ratio: 1 / 1;
     object-fit: cover;
     object-position: top;
@@ -38,7 +38,6 @@ export default {
   }
 
   .title {
-    padding: 1em 0;
     text-transform: uppercase;
   }
 }
