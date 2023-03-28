@@ -25,7 +25,8 @@ export default {
 
   img {
     width: 100%;
-    height: 200px;
+    // height: 200px;
+    aspect-ratio: 1 / 1;
     object-fit: cover;
     object-position: top;
 
